@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jan 30 12:54:12 2018
+
+@author: duc
+"""
+
+
+# generator
+def square_numbers_generator(numbers):
+    for number in numbers:
+        yield number*number
+        
+        
+mySquareNumbers = square_numbers_generator([1,2,3,4])
+print(square_numbers_generator([1,2,3,4]))
+print(next(mySquareNumbers))
+
+for number in mySquareNumbers:
+    print(number)
+    
+#----------------
+    
+    
+# array
+def square_numbers_array(numbers):
+    squareNumbers = []
+    for number in numbers:
+        squareNumbers.append(number**2)
+    return squareNumbers
+
+print(square_numbers_array([1,2,3,4]))
+ 
+#----------------
